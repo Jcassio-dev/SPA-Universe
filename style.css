@@ -1,0 +1,213 @@
+:root{
+    font-size: 62.5%;
+
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fc-primary: #FFFFFF;
+    --fc-secondary: #353535;
+    --fc-hover: #02799D;
+
+
+    --bg-hover: #FFFFFF;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+
+    padding: 5rem 3rem;
+
+    font-family: var(--ff-primary);
+    transition: 700ms;
+}
+#app{
+    height: 100%;
+
+    display: grid;
+    place-content: center;
+    padding-bottom: 8rem;
+}
+nav{
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+   width: 85vw;
+   align-items: center;
+   animation: topdown 700ms;
+   
+}
+nav ul{
+    display: flex;
+    gap: 3.2rem;
+    
+    font-size: clamp(1.5rem, 0.5rem + 3vw, 2.4rem);
+    color: #FFFFFF;
+
+
+    list-style: none;
+    align-items: center;
+
+   
+}
+a{
+    font-style: none;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+li{
+    transition: all 200ms;
+
+    cursor: pointer;
+}
+li:hover{
+    transform: scale(1.1);
+}
+.text-wrapper{
+    max-width: 64.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-left: 4.7rem;
+    margin-top: 6.3rem;
+    margin-bottom: 8rem;
+
+    animation: leftright 700ms 300ms backwards;
+}
+h1{
+font-weight: 700;
+font-size: clamp(2rem, 1.5rem + 3vw, 4.8rem);
+line-height: 125%;
+
+color: var(--fc-primary)
+}
+p{
+color: var(--fc-primary);
+font-size: clamp(1rem, 0.5rem + 2vw, 1.8rem );
+line-height: 160%;
+text-align: justify;
+
+padding-right: 1.5rem;
+}
+
+.text-center{
+    text-align: center;
+
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+
+    align-items: center;
+
+    animation: leftright 700ms 300ms backwards;
+
+
+}
+#button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    background: none;
+
+    width: 19.5rem;
+    height: 4.8rem;
+
+    border: .2rem solid #FFFFFF;
+    border-radius: .5rem;
+
+    color: var(--fc-primary);
+
+    transition: all 200ms;
+
+    cursor: pointer;
+
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+
+}
+
+#button:hover{
+    background: var(--bg-hover);
+    color: var(--fc-hover);
+
+    transform: scale(1.1);
+}
+
+.focus{
+    font-weight: 700;
+}
+.page1{
+   background: url('assets/images/mountains-universe-1.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+}
+.page2{
+    background: url('assets/images/mountains-universe02.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    }
+.page3{
+    background: url('assets/images/mountains-universe-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+@media(min-width: 700px){
+    nav{
+       justify-content:flex-start;
+       gap: 3.2rem;
+       margin-left: 9rem
+        
+     }
+    .text-wrapper{
+        margin-left: 10.2rem;
+        margin-bottom: 0;
+    }
+    #app{
+        display: block;
+       height: auto;
+       padding-bottom: 0;
+    }
+    .text-center{
+        margin-top: 20.4rem;
+    }
+}
+
+
+@keyframes topdown{
+    0%{
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes leftright{
+    0%{
+        transform: translateX(+15px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
